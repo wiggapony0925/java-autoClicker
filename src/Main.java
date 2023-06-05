@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        AutoClickerApp autoClickerApp = new AutoClickerApp();
+        AutoCLickerApp autoCLickerApp = new AutoCLickerApp();
+        autoCLickerApp.ShowUI();
     }
 }
