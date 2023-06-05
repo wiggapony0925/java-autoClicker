@@ -9,10 +9,10 @@ public class AutoCLickerApp {
     private JFrame frame;
     private JTextField cpsField;
     private JToggleButton actionTypeToggle;
-    private Button toggleKeybindButton;
+    private JButton toggleKeybindButton;
     private JComboBox<String> mouseButtonComboBox;
-    private JButton StartButton;
-    private JButton StopButton;
+    private JButton startButton;
+    private JButton stopButton;
     private JButton exitButton;
 
 
@@ -27,6 +27,23 @@ public class AutoCLickerApp {
         // keybinds names
         cpsField = new JTextField(10);
         actionTypeToggle = new JToggleButton("Toggle ACtion Type");
+        toggleKeybindButton = new JButton("Toggle Keybind");
+        mouseButtonComboBox = new JComboBox<>(new String[]{"Left Button", "Right Button", "Middle Button"});
+        startButton = new JButton("Start");
+        stopButton = new JButton("STop");
+
+        // add to the frain
+
+
+
+
+    }
+
+    public void ShowUI() {
+        // show ui on the event dispactch Thread
+        SwingUtilities.invokeLater(()-> {
+            frame.setVisible(true);
+        });
     }
 
 
