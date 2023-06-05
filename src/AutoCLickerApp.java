@@ -17,7 +17,7 @@ public class AutoCLickerApp {
 
 
     //function
-    public AutoClickerUI() {
+    public AutoCLickerApp() {
         frame = new JFrame("Auto Clicker");
         frame.setSize(300, 200);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,7 +30,8 @@ public class AutoCLickerApp {
         toggleKeybindButton = new JButton("Toggle Keybind");
         mouseButtonComboBox = new JComboBox<>(new String[]{"Left Button", "Right Button", "Middle Button"});
         startButton = new JButton("Start");
-        stopButton = new JButton("STop");
+        stopButton = new JButton("Stop");
+        exitButton = new JButton("Exit");
 
         // add to the frain
         frame.add(new JLabel("clicks per Secondl: "));
