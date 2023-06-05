@@ -33,7 +33,18 @@ public class AutoCLickerApp {
         stopButton = new JButton("STop");
 
         // add to the frain
+        frame.add(new JLabel("clicks per Secondl: "));
+        frame.add(cpsField);
+        frame.add(actionTypeToggle);
+        frame.add(toggleKeybindButton);
+        frame.add(mouseButtonComboBox);
+        frame.add(startButton);
+        frame.add(stopButton);
+        frame.add(exitButton);
 
+        // show frame
+
+        frame.setVisible(true);
 
 
 
