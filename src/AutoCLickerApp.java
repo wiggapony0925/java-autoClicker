@@ -16,6 +16,19 @@ public class AutoCLickerApp {
     private JButton exitButton;
 
 
+    //function
+    public AutoClickerUI() {
+        frame = new JFrame("Auto Clicker");
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new FlowLayout());
+
+
+        // keybinds names
+        cpsField = new JTextField(10);
+        actionTypeToggle = new JToggleButton("Toggle ACtion Type");
+    }
+
 
 
 

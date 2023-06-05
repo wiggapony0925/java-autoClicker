@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        AutoClickerApp autoClickerApp= new AutoClickerApp();
+        AutoClickerApp autoClickerApp = new AutoClickerApp();
     }
 }
