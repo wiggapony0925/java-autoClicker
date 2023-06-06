@@ -12,6 +12,6 @@ public class AutoClicker {
     }
 
     public void startClicking(int clicksPerSecond, int mouseButton) {
-
+        long delay = (long) (1000.0 / clicksPerSecond);
     }
 }
