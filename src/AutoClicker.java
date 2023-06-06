@@ -29,11 +29,12 @@ public class AutoClicker {
             e.printStackTrace();
         }
     }
-
+    //stop clicking button
     public void stopClicking() {
         isRunning = false;
     }
 
+    //exit button
     public void exit() {
         System.exit(0);
     }

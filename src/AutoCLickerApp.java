@@ -23,7 +23,7 @@ public class AutoCLickerApp {
     //function
     public AutoCLickerApp() {
         frame = new JFrame("Auto Clicker");
-        frame.setSize(300, 200);
+        frame.setSize(500, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new FlowLayout());
 
@@ -79,4 +79,5 @@ public class AutoCLickerApp {
         autoClicker.stopClicking();
         System.exit(0);
     }
+
 }
