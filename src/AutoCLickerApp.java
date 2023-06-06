@@ -14,6 +14,7 @@ public class AutoCLickerApp {
     private JButton startButton;
     private JButton stopButton;
     private JButton exitButton;
+    private JLabel keybindLabel;
 
 
     //function
@@ -27,6 +28,7 @@ public class AutoCLickerApp {
         // keybinds names
         cpsField = new JTextField(10);
         actionTypeToggle = new JToggleButton("Toggle ACtion Type");
+        keybindLabel = new JLabel("Toogle Keybind: None");
         toggleKeybindButton = new JButton("Toggle Keybind");
         mouseButtonComboBox = new JComboBox<>(new String[]{"Left Button", "Right Button", "Middle Button"});
         startButton = new JButton("Start");
@@ -37,6 +39,7 @@ public class AutoCLickerApp {
         frame.add(new JLabel("clicks per Secondl: "));
         frame.add(cpsField);
         frame.add(actionTypeToggle);
+        frame.add(keybindLabel);
         frame.add(toggleKeybindButton);
         frame.add(mouseButtonComboBox);
         frame.add(startButton);
