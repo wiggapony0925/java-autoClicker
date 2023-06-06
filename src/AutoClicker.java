@@ -10,8 +10,8 @@ public class AutoClicker {
             e.printStackTrace();
         }
     }
-
+    // this is the start clicking functionality     method = function   mouseButton(left, middle, right)
     public void startClicking(int clicksPerSecond, int mouseButton) {
-        long delay = (long) (1000.0 / clicksPerSecond);
+        long delay = (long) (1000.0 / clicksPerSecond);  // calculates the delay of each click
     }
 }
