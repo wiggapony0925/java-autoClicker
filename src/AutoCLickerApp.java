@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.* ;
+import java.awt.event.*;
+
 
 public class AutoCLickerApp {
     /* This file will  be responsible for creating and dealing with the graphical interface
@@ -36,10 +38,20 @@ public class AutoCLickerApp {
         stopButton = new JButton("Stop");
         exitButton = new JButton("Exit");
 
+        // MAKE THE ACTIONLISTENERS FOR THE BUTTONS
+        startButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int cps = Integer.parseInt(cpsField.getText());
+                autoClicker.startClicking(cps);
+            }
+        });
+
+
         // add to the frain
         frame.add(new JLabel("clicks per Secondl: "));
         frame.add(cpsField);
-        frame.add(actionTypeToggle);
+        // frame.add(actionTypeToggle);
         frame.add(keybindLabel);
         frame.add(toggleKeybindButton);
         frame.add(mouseButtonComboBox);
@@ -66,7 +78,7 @@ public class AutoCLickerApp {
     private void addEventListeners() {
         startButton.addActionListener(e -> {
             int clicksPerSecond = Integer.parseInt(cpsField.getText());
-            
+
         });
     }
 
