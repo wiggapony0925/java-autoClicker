@@ -6,6 +6,7 @@ public class AutoCLickerApp {
     private variables
      */
     //      components/instances
+    private AutoClicker autoClicker;
     private JFrame frame;
     private JTextField cpsField;
     private JToggleButton actionTypeToggle;
@@ -58,6 +59,14 @@ public class AutoCLickerApp {
         // show ui on the event dispactch Thread
         SwingUtilities.invokeLater(()-> {
             frame.setVisible(true);
+        });
+    }
+
+    // events listerners from the AutoClicker Class
+    private void addEventListeners() {
+        startButton.addActionListener(e -> {
+            int clicksPerSecond = Integer.parseInt(cpsField.getText());
+            
         });
     }
 
