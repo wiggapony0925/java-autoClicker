@@ -1,6 +1,12 @@
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
-        AutoCLickerApp autoCLickerApp = new AutoCLickerApp();
-        autoCLickerApp.ShowUI();
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                AutoCLickerApp app = new AutoCLickerApp();
+            }
+        });
     }
 }

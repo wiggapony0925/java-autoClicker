@@ -1,10 +1,10 @@
 import javax.swing.*;
-import java.awt.* ;
-import java.awt.event.*;
-
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AutoCLickerApp {
-    /* This file will  be responsible for creating and dealing with the graphical interface
+    /* This file will be responsible for creating and dealing with the graphical interface
     private variables
      */
     //      components/instances
@@ -27,11 +27,10 @@ public class AutoCLickerApp {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new FlowLayout());
 
-
         // keybinds names
         cpsField = new JTextField(10);
-        actionTypeToggle = new JToggleButton("Toggle ACtion Type");
-        keybindLabel = new JLabel("Toogle Keybind: None");
+        actionTypeToggle = new JToggleButton("Toggle Action Type");
+        keybindLabel = new JLabel("Toggle Keybind: None");
         toggleKeybindButton = new JButton("Toggle Keybind");
         mouseButtonComboBox = new JComboBox<>(new String[]{"Left Button", "Right Button", "Middle Button"});
         startButton = new JButton("Start");
@@ -47,11 +46,16 @@ public class AutoCLickerApp {
             }
         });
 
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                exit();
+            }
+        });
 
-        // add to the frain
-        frame.add(new JLabel("clicks per Secondl: "));
+        // add components to the frame
+        frame.add(new JLabel("Clicks per Second: "));
         frame.add(cpsField);
-        // frame.add(actionTypeToggle);
         frame.add(keybindLabel);
         frame.add(toggleKeybindButton);
         frame.add(mouseButtonComboBox);
@@ -59,30 +63,15 @@ public class AutoCLickerApp {
         frame.add(stopButton);
         frame.add(exitButton);
 
-        // show frame
+        // Create an instance of the AutoClicker class
+        autoClicker = new AutoClicker();
 
+        // Show the frame
         frame.setVisible(true);
-
-
-
     }
 
-    public void ShowUI() {
-        // show ui on the event dispactch Thread
-        SwingUtilities.invokeLater(()-> {
-            frame.setVisible(true);
-        });
+    private void exit() {
+        autoClicker.stopClicking();
+        System.exit(0);
     }
-
-    // events listerners from the AutoClicker Class
-    private void addEventListeners() {
-        startButton.addActionListener(e -> {
-            int clicksPerSecond = Integer.parseInt(cpsField.getText());
-
-        });
-    }
-
-
-
-
 }
