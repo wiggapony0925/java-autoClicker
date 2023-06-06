@@ -34,6 +34,10 @@ public class AutoClicker {
         isRunning = false;
     }
 
+    public void exit() {
+        System.exit(0);
+    }
+
 
 }
 
