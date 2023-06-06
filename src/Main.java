@@ -5,7 +5,7 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                AutoCLickerApp app = new AutoCLickerApp();
+                AutoCLickerApp app = new AutoCLickerApp();                  //running the file
             }
         });
     }

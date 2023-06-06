@@ -37,21 +37,26 @@ public class AutoCLickerApp {
         stopButton = new JButton("Stop");
         exitButton = new JButton("Exit");
 
+
+
+
         // MAKE THE ACTIONLISTENERS FOR THE BUTTONS
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int cps = Integer.parseInt(cpsField.getText());
-                autoClicker.startClicking(cps);
+                autoClicker.startClicking(cps);                             //listeners
             }
         });
-
+                //exit button
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 exit();
             }
         });
+                //keys
+
 
         // add components to the frame
         frame.add(new JLabel("Clicks per Second: "));

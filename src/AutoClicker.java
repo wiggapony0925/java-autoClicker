@@ -19,7 +19,7 @@ public class AutoClicker {
        int delay = 1000 / cps; //calc the delay im miliseconds
 
         while (isRunning) {
-            robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+            robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);         //loop
             robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         }
 
